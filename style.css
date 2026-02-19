@@ -1,0 +1,864 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: mon;
+    border: none;
+}
+@font-face {
+    font-family: mon;
+    src: url(font/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: alt;
+    src: url(font/MontserratAlternates-Bold.ttf);
+}
+.alt {
+    font-family: alt;
+    font-weight: 550;
+}
+.op {
+    opacity: 1;
+}
+.sm {
+    font-weight: 570;
+}
+h1 {
+    font-size: 40px;
+    line-height: 64px;
+    opacity: 1;
+}
+p.l {
+    font-size: 32px;
+    line-height: 48px;
+    opacity: 1;
+    max-width: 512px;
+}
+p.m {
+    font-size: 20px;
+    line-height: 32px;
+    opacity: 1;
+    font-weight: 600;
+}
+p {
+    font-size: 16px;
+    line-height: 28px;
+    opacity: 0.7;
+}
+p.s {
+    font-size: 14px;
+    line-height: 24px;
+}
+p.vs {
+    font-size: 12px;
+    line-height: 20px;
+}
+img {
+    width: 100%;
+}
+.start {
+    margin-top: 108px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 64px;
+}
+section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1440px;
+    padding: 64px;
+    gap: 64px;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex: 1;
+    gap: 16px;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex: 1;
+    gap: 16px;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+.b {
+    color: rgba(41, 32, 191, 1);
+}
+.y {
+    color: rgba(229, 156, 40, 1);
+}
+.w {
+    color: white;
+}
+.mainnav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    padding: 32px 64px;
+    border-bottom: 1px solid rgba(41, 32, 191, 0.2);
+}
+.leftnav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 48px;
+}
+.brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+}
+.logo {
+    width: 44px;
+}
+ul {
+    list-style: none;
+}
+.navlink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+.navlink li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 16px;
+}
+.navlink li.active {
+    border-bottom: 1px solid rgba(41, 32, 191, 0.7);
+}
+.ham , .mobnav {
+    display: none;
+}
+.singlebut {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 20px;
+    border-radius: 4px;
+    background-color: rgba(41, 32, 191, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.mainlast .singlebut {
+    background-color: rgba(229, 156, 40, 1);
+}
+.duobut {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    margin-top: 8px;
+}
+.duobut button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 20px;
+    border-radius: 4px;
+    background-color: rgba(41, 32, 191, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.duobut button.min {
+    background-color: white;
+    border: 1px solid rgba(41, 32, 191, 0.2);
+}
+.bgfix .duobut button.dom {
+    background-color: rgba(229, 156, 40, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.bgfix {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-image: url(img/bg1.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.bgban {
+    margin-top: -64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-image: url(img/ban.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner .left h1 {
+    max-width: 512px;
+}
+.banner .right{
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+.side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    flex: 1;
+    border-left: 1px solid white;
+    text-align: center;
+    padding: 12px 32px;
+}
+.side:last-child {
+    border-right: 1px solid white;
+}
+.bens {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    gap: 16px;
+    justify-content: flex-start;
+}
+.bens li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.textside {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 64px;
+}
+.textside h1 {
+    width: 45%;
+}
+.textside p {
+    width: 45%;
+    text-align: end;
+}
+.cards {
+    flex-direction: column;
+}
+.scroll {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    width: 100%;
+    overflow-x: scroll;
+}
+.scroll::-webkit-scrollbar{
+    display: none;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 360px;
+    min-width: 360px;
+    height: 472px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.imgcard {
+    width: 100%;
+}
+.textcards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 12px;
+    gap: 12px;
+}
+.genrecards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.genrecard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(41, 32, 191, 0.2);
+    border-radius: 4px;
+    padding: 2px 8px;
+}
+.addcards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+}
+.addcard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.imgaddcard {
+    width: 14px;
+}
+.textcards button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 0px;
+    background-color: rgba(41, 32, 191, 1);
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 4px;
+}
+.faq {
+    flex-direction: column;
+}
+.allfaq {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.faqbox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: calc(50% - 12px);
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 24px;
+    border-radius: 12px;
+    gap: 32px;
+}
+.ques {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+.anser {
+    display: none;
+}
+.active .anser {
+    display: flex;
+}
+.vicon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    border-radius: 4px;
+    background-color: rgba(41, 32, 191, 1);
+    padding: 6px;
+    transition: all ease 0.1s;
+}
+.active .vicon img{
+    transition: all ease 0.1s;
+    transform: rotate(90deg);
+}
+.textmid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 12px;
+    text-align: center;
+}
+.textmid h1 {
+    width: 512px;
+}
+.textmid p {
+    width: 90%;
+}
+.mainlast {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 12px;
+    background-image: url(img/endbg.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    padding: 48px 0px 0px 48px;
+}
+.mainlast .right {
+    position: relative;
+    z-index: 20;
+    min-height: 365px;
+}
+.imglast {
+    position: absolute;
+    z-index: 15;
+    bottom: 0;
+    right: 0;
+    display: flex;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(41, 32, 191, 1);
+}
+.topfoot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1440px;
+    gap: 16px;
+    padding: 24px 64px;
+}
+.topfoot p {
+    max-width: 512px;
+    text-align: center;
+}
+.botfoot {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 1312px;
+    padding: 12px 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    gap: 12px;
+}
+.whf .left {
+    flex: 2;
+}
+.whf .right {
+    flex: 3;
+    gap: 0;
+}
+.why {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 64px 24px;
+    border-bottom: 1px solid white;
+    gap: 48px;
+}
+.imgwhy {
+    width: 64px;
+    min-width: 64px;
+}
+.team {
+    flex-direction: column;
+}
+.tems {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.tem {
+    width: calc(calc(100% / 3) - 16px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+.comment {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+}
+.comens {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow-x: scroll;
+    gap: 16px;
+}
+.comens::-webkit-scrollbar{
+    display: none;
+}
+.comen {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 440px;
+    min-width: 440px;
+    height: 220px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 24px;
+    border-radius: 12px;
+    gap: 24px;
+}
+.topcomen {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+    z-index: 20;
+}
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.imgprofile {
+    width: 48px;
+}
+.petik {
+    position: absolute;
+    z-index: 15;
+    right: 0;
+    top: 0;
+}
+.like {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+}
+.genrepop {
+    flex-direction: column;
+}
+.genpops {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.genpop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: calc(calc(100% / 3) - 16px);
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    gap: 16px;
+}
+.titgenpop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+}
+.imggenpop {
+    width: 32px;
+    min-width: 32px;
+}
+.genpop .vicon {
+    align-self: flex-end;
+}
+.maindisc {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 48px 0px 0px 48px;
+    border-radius: 12px;
+}
+.topdisc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+}
+.branddisc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.branddisc .logo {
+    width: 34px;
+}
+.maindisc .left .singlebut {
+    align-self: flex-end;
+}
+.maindisc .right {
+    position: relative;
+    z-index: 20;
+    min-height: 365px;
+}
+.imgdisc {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    min-width: 472px;
+}
+@media screen and (max-width:1024px) {
+    h1 {
+    font-size: 32px;
+    line-height: 52px;
+    opacity: 1;
+}
+p.l {
+    font-size: 24px;
+    line-height: 38px;
+    opacity: 1;
+    max-width: 512px;
+}
+p.m {
+    font-size: 18px;
+    line-height: 28px;
+    opacity: 1;
+    font-weight: 600;
+}
+p {
+    font-size: 14px;
+    line-height: 24px;
+    opacity: 0.7;
+}
+p.s {
+    font-size: 12px;
+    line-height: 20px;
+}
+p.vs {
+    font-size: 10px;
+    line-height: 18px;
+}
+section {
+    flex-direction: column;
+}
+.hero.right {
+    order: 1;
+}
+.hero.left {
+    order: 2;
+}
+.ben .right, .mainlast .right,.maindisc .right {
+    display: none;
+}
+.bens {
+    margin-top: 12px;
+}
+.card {
+    height: 452px;
+}
+.faqbox {
+    width: 100%;
+}
+.mainlast {
+    padding: 0;
+}
+.mainlast .left {
+    padding: 64px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.genpop {
+    width: calc(50% - 12px);
+}
+.maindisc {
+    padding: 32px;
+}
+}
+@media screen and (max-width:768px) {
+    .mainnav {
+        padding: 24px 48px;
+    }
+    section {
+        padding: 32px;
+        gap: 48px;
+    }
+    .imgside, .brand .logo {
+        width: 32px;
+        min-width: 32px;
+    }
+    .imgben {
+        width: 20px;
+        min-width: 20px;
+    }
+    .imggenpop, .branddisc .logo  {
+        width: 28px;
+        min-width: 28px;
+    }
+    .imgwhy {
+        width: 48px;
+        min-width: 48px;
+    }
+    .textside {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .textside h1 {
+        width: 90%;
+    }
+    .textside p {
+        width: 100%;
+        text-align: center;
+    }
+    .tem {
+        width: calc(50% - 12px);
+    }
+    .mainnav .singlebut , .mainnav .navlink {
+        display: none;
+    }
+    .ham {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 28px;
+        gap: 4px;
+    }
+    .ham span {
+        width: 100%;
+        height: 4px;
+        background-color: rgba(41, 32, 191, 1);
+        border-radius: 8px;
+    }
+    .mobanav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-color: white;
+        height: 100%;
+        width: 80%;
+        position: fixed;
+        z-index: 1000;
+        right: -101%;
+        top: 0;
+        padding: 48px 24px;
+        border-left:1px solid rgba(0, 0, 0, 0.2) ;
+        border-radius: 12px 0px 0px 12px;
+        gap: 24px;
+        transition: all ease 0.2s;
+    }
+    a {
+        width: 100%;
+    }
+    .navlink {
+        margin-top: 48px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .navlink li {
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 12px 24px;
+    }
+    .close {
+        display: flex;
+        width: 24px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 20;
+    }
+    .close span {
+        position: absolute;
+        z-index: 15;
+        width: 100%;
+        height: 4px;
+        background-color: rgba(41, 32, 191, 1);
+        border-radius: 8px;
+        transform: rotate(45deg);
+    }
+    .close span:last-child {
+        transform: rotate(-45deg);
+    }
+    .mobanav button{
+        align-self: flex-end;
+    }
+}
+@media screen and (max-width:576px) {
+    .genpop {
+        width: 100%;
+    }
+}

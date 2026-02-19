@@ -1,23 +1,22 @@
-const faqs = document.querySelectorAll(".faqbox");
-
-faqs.forEach((faq) => {
-    faq.addEventListener("click" , () => {
-        if (!faq.classList.contains("active")) {
-            faqs.forEach((f) => {
-            f.classList.remove("active")
-        })
-        faq.classList.add("active")
+const mobnav = document.querySelector(".mobanav")
+const close = document.querySelector(".close")
+close.addEventListener("click", () => {
+    mobnav.style.right = "-101%";
+})
+const ham = document.querySelector(".ham")
+ham.addEventListener("click", () => {
+    mobnav.style.right = "0";
+})
+const faqboxs = document.querySelectorAll(".faqbox")
+faqboxs.forEach((faqbox) => {
+    faqbox.addEventListener("click" , () => {
+        if (faqbox.classList.contains("active")) {
+            faqbox.classList.remove("active")
         } else {
-            faq.classList.remove("active")
+            faqboxs.forEach((f) => {
+                f.classList.remove("active")
+            })
+            faqbox.classList.add("active")
         }
     })
-})
-const mobnav = document.querySelector(".mobnav") 
-const ham = document.querySelector(".ham") 
-ham.addEventListener("click", () => {
-    mobnav.style.right = "0"
-})
-const close = document.querySelector(".butmobnav")
-close.addEventListener("click", () => {
-    mobnav.style.right = "-100%"
 })
