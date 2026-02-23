@@ -20,3 +20,10 @@ faqboxs.forEach((faqbox) => {
         }
     })
 })
+const scrollers = document.querySelectorAll(".scroll");
+scrollers.forEach((scroller) => {
+    scroller.addEventListener("wheel", (e) => {
+    e.preventDefault()
+    scroller.scrollLeft += e.deltaY
+})
+})

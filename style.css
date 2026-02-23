@@ -14,6 +14,9 @@
     font-family: alt;
     src: url(font/MontserratAlternates-Bold.ttf);
 }
+button ,  .genpop{
+    cursor: pointer;
+}
 .alt {
     font-family: alt;
     font-weight: 550;
@@ -289,6 +292,8 @@ ul {
     gap: 12px;
     width: 100%;
     overflow-x: scroll;
+    scroll-snap-type: x proximity; /* ini inti nya */
+    scroll-behavior: smooth;
 }
 .scroll::-webkit-scrollbar{
     display: none;
@@ -304,6 +309,7 @@ ul {
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid rgba(0, 0, 0, 0.2);
+    scroll-snap-align: start;
 }
 .imgcard {
     width: 100%;
